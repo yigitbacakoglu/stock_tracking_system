@@ -20,9 +20,6 @@ pre {
 
 a {
   color: #000;
-  &:visited {
-    color: #666;
-  }
   &:hover {
     color: #fff;
     background-color: #000;
@@ -36,7 +33,8 @@ div {
 }
 
 #notice {
-  color: green;
+  color: #304D06;
+  background-color: #A2E342;
 }
 
 .field_with_errors {
