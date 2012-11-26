@@ -53,10 +53,10 @@ ActiveRecord::Schema.define(:version => 20121126191659) do
     t.string   "name"
     t.string   "brand"
     t.string   "description"
-    t.decimal  "price"
-    t.decimal  "cost_price"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.decimal  "price",       :precision => 10, :scale => 0
+    t.decimal  "cost_price",  :precision => 10, :scale => 0
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "products_storehouses", :force => true do |t|
@@ -98,10 +98,10 @@ ActiveRecord::Schema.define(:version => 20121126191659) do
     t.string   "from_type"
     t.integer  "to_id"
     t.string   "to_type"
-    t.decimal  "distance"
+    t.decimal  "distance",   :precision => 10, :scale => 0
     t.integer  "duration"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "users", :force => true do |t|
