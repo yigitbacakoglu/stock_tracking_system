@@ -17,5 +17,4 @@ production:
   encoding: utf8
   database: sts_prod
   pool: 5
-  socket: /tmp/mysql.sock
-
+  socket: /var/run/mysqld/mysql.sock
