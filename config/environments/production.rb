@@ -60,7 +60,6 @@ StockTrackingSystem::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.assets.initialize_on_precompile = false
   config.gem "cancan"
   
   # Log the query plan for queries taking more than this (works
