@@ -1,7 +1,4 @@
 StockTrackingSystem::Application.routes.draw do
-  resources :controllers
-
-
   resources :products
 
 
