@@ -1,11 +1,20 @@
 StockTrackingSystem::Application.routes.draw do
-  resources :products
+
+  namespace :admin do
+    resources :products
+    resources :stores
 
 
-  resources :stores
+  end
+  match '/admin', :to => 'admin/overview#index'
 
 
-  devise_for :users
+  devise_for :users,
+             :controllers => {:sessions => "user_sessions",
+                              :registrations => "user_registrations",
+                              :passwords => "user_passwords"
+             }
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

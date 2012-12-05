@@ -1,1 +1,67 @@
-welcome
+<div class="container" style="width:1024px;">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "STS", root_path, class: "brand" %>
+        <ul class="nav">
+          <li><a rel="#feature" class='scroll'>Feature</a></li>
+          <li><a rel="#about" class='scroll'>About</a></li>
+          <li><a rel="#contact" class='scroll'>Contact</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><a href="/users/sign_in">Login</a></li>
+          <li><a href="/users/sign_up">Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="myCarousel" class="carousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="active item">
+        <%= image_tag "slider_01.jpg" %>
+        <div class="carousel-caption">
+          <h4>Welcome</h4>
+          <p>STS</p>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "slider_01.jpg" %>
+        <div class="carousel-caption">
+          <h4>h4</h4>
+          <p>aciklama。</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <%= image_tag "slider_01.jpg" %>
+        <div class="carousel-caption">
+          <h4>h5</h4>
+          <p>aciklama。</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+
+  <footer style="margin-top:-17px;">
+    <div class="form-actions" style="border-bottom-right-radius:6px;border-bottom-left-radius:4px;">
+      <div >
+
+      </div>
+      <div class="row">
+        <div class="span2">
+          <h1>STS</h1>
+        </div>
+        <div class="span4" style="float:right">
+          <p>YCB </p>
+          <p>Copyright &copy; 2012 All Rights Reserved.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</div>

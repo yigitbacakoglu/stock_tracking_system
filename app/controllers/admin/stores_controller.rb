@@ -1,4 +1,4 @@
-class StoresController < ApplicationController
+class Admin::StoresController < ApplicationController
   
   # GET /stores
   # GET /stores.json

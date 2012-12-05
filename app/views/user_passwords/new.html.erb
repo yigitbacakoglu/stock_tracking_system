@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to "STS", root_path, class: "brand" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span6 offset3">
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :class => 'form-horizontal', :method => :post }) do |f| %>
+          <fieldset>
+            <legend>Forgot password?</legend>
+
+            <div class="control-group email">
+              <label class="email control-label" for="user_email">
+                E-mail</label>
+
+              <div class="controls">
+                <%= f.email_field :email %>
+              </div>
+            </div>
+
+            <div class="form-actions" style="margin-bottom:0">
+              <%= f.submit "Reset my password", :class => 'btn btn-primary' %>
+              <%= link_to 'Cancel', root_path, :class => 'btn' %>
+            </div>
+
+          </fieldset>
+      <% end %>
+    </div>
+
+
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>Changhong & Hu Zhengping 2012 &copy; All Rights Reserved.</p>
+  </footer>
+
+</div>
