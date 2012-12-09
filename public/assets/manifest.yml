@@ -1,18 +1,12 @@
 ---
 rails.png: rails-e19cc14e7b458337c25b4a0b230d6cac.png
 rails/index.png: rails-e19cc14e7b458337c25b4a0b230d6cac.png
-twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e-53e9bc853f8f473f50e90e5215daac1e.png
-twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e/index.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e-53e9bc853f8f473f50e90e5215daac1e.png
-twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467-27ae535ced0dc82c64894d995a87c467.png
-twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467/index.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467-27ae535ced0dc82c64894d995a87c467.png
-twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
-twitter/bootstrap/glyphicons-halflings-white/index.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
-twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png
-twitter/bootstrap/glyphicons-halflings/index.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png
-application.js: application-03b62cd7e42d1e459591e152bb6580bd.js
-application/index.js: application-03b62cd7e42d1e459591e152bb6580bd.js
-application.css: application-5d4b43f2f40c424d731ea34642fbf2c5.css
-application/index.css: application-5d4b43f2f40c424d731ea34642fbf2c5.css
+slider_01.jpg: slider_01-623d945403e8b7e6961058ab7ccd74da.jpg
+slider_01/index.jpg: slider_01-623d945403e8b7e6961058ab7ccd74da.jpg
+application.js: application-0f2ff55aeff0da0b0854db616a4fe822.js
+application/index.js: application-0f2ff55aeff0da0b0854db616a4fe822.js
+application.css: application-38dd72376827f176dfa52c4fdd431629.css
+application/index.css: application-38dd72376827f176dfa52c4fdd431629.css
 fontawesome-webfont.eot: fontawesome-webfont-5f9bf001d945baa3287193f70ac71c68.eot
 fontawesome-webfont/index.eot: fontawesome-webfont-5f9bf001d945baa3287193f70ac71c68.eot
 fontawesome-webfont.svg: fontawesome-webfont-9c8b49b9721b8663e25842f77bd78bd9.svg
@@ -21,3 +15,7 @@ fontawesome-webfont.ttf: fontawesome-webfont-6dd366bc6d7701471ccf87bd905088dc.tt
 fontawesome-webfont/index.ttf: fontawesome-webfont-6dd366bc6d7701471ccf87bd905088dc.ttf
 fontawesome-webfont.woff: fontawesome-webfont-745b5efebbdc00fdd6b2c4dc6b957657.woff
 fontawesome-webfont/index.woff: fontawesome-webfont-745b5efebbdc00fdd6b2c4dc6b957657.woff
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
+twitter/bootstrap/glyphicons-halflings-white/index.png: twitter/bootstrap/glyphicons-halflings-white-27ae535ced0dc82c64894d995a87c467.png
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png
+twitter/bootstrap/glyphicons-halflings/index.png: twitter/bootstrap/glyphicons-halflings-53e9bc853f8f473f50e90e5215daac1e.png
