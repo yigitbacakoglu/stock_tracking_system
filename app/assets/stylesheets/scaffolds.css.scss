@@ -76,3 +76,48 @@ div {
     list-style: square;
   }
 }
+
+
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 15px 10px;
+  color: #999999;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #333333;
+}
+// Inner for background effects
+// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+  min-height: 30px;
+  padding-left:  20px;
+  padding-right: 20px;
+  background: #333
+  ;}
+// Brand: website or project name
+// -------------------------
+.navbar .brand {
+
+  color: white !important;
+}
+// Janky solution for now to account for links outside the .nav
+// -------------------------
+.navbar-link {
+  color: #999 !important;
+  &:hover {
+    color: white !important ;
+  }
+}
+
+// Dividers in navbar
+// -------------------------
+.navbar .divider-vertical {
+  margin: 0 9px;
+  border-left: 1px solid #333 !important;
+  border-right: 1px solid #333 !important; ;
+}
+
