@@ -16,6 +16,10 @@
 
 </head>
 <body>
+
+<div class="container">
+
+
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
@@ -24,16 +28,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <%= link_to "STS", root_path, class: "brand" %>
+      <%= link_to "STS", "/admin", class: "brand" %>
       <div class="container nav-collapse">
 
         <ul class="nav">
-          <li><a rel="#feature" class='scroll'>Feature</a></li>
-          <li><a rel="#about" class='scroll'>About</a></li>
-          <li><a rel="#contact" class='scroll'>Contact</a></li>
+          <li><a rel='group1' href='<%= admin_products_path %>' class='scroll'>Products</a></li>
+          <li><a rel='group1' href='<%= admin_stores_path %>' class='scroll'>Stores</a></li>
+          <li><a rel='group1' href='<%= admin_storehouses_path %>' class='scroll'>Ware Houses</a></li>
+          <!--<li><a rel='group1'href='<%= admin_products_path %>' class='scroll'>Users</a></li>-->
         </ul>
         <ul class="nav pull-right">
-          <li><a href="/users/sign_in">Logout</a></li>
+          <li><%=link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -43,30 +48,31 @@
 </div>
 
 
-<div class="container">
   <div class="row">
-
-    <div class="span3">
-      <div class="well sidebar-nav">
-        <h3>Sidebar</h3>
-        <ul class="nav nav-list">
-          <li class="nav-header">Sidebar</li>
-          <li><%= link_to "Link1", "/path1" %></li>
-          <li><%= link_to "Link2", "/path2" %></li>
-          <li><%= link_to "Link3", "/path3" %></li>
-        </ul>
-      </div>
-      <!--/.well -->
-    </div>
-    <!--/span-->
 
     <div class="span9">
       <%= yield %>
     </div>
-  </div>
+
+      <div class="span3">
+        <div class="well sidebar-nav">
+          <h3>Sidebar</h3>
+          <ul class="nav nav-list">
+            <li class="nav-header">Sidebar</li>
+            <li><%= link_to "Link1", "" %></li>
+            <li><%= link_to "Link2", "" %></li>
+            <li><%= link_to "Link3", "" %></li>
+          </ul>
+        </div>
+        <!--/.well -->
+      </div>
+      <!--/span-->
+
+
+    </div>
   <!--/row-->
 
-  <footer>
+  <footer id="footer" >
     <p>&copy; Company 2012</p>
   </footer>
 

@@ -1,10 +1,10 @@
 body {
-  background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -12,6 +12,18 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+.page-header {
+  margin: 10px 0 10px !important;
+
+}
+
+#errorExplanation {
+  background-color: #eee;
+  p{
+    color:red;
+  }
+
+}
 pre {
   background-color: #eee;
   padding: 10px;
@@ -20,11 +32,8 @@ pre {
 
 a {
   color: #000;
-  &:visited {
-    color: #666;
-  }
   &:hover {
-    color: #fff;
+    color: #333;
     background-color: #000;
   }
 }

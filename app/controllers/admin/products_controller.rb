@@ -27,6 +27,7 @@ class Admin::ProductsController < Admin::BaseController
   # GET /products/new.json
   def new
     @product = Product.new
+    @product.products_storehouses.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,9 +35,19 @@ class Admin::ProductsController < Admin::BaseController
     end
   end
 
+  def delete_store_house
+    @store_house = ProductsStorehouses.find(params[:id])
+    @store_house.destroy if @store_house
+    respond_to do |format|
+      format.html { redirect_to admin_products_url }
+      format.json { head :no_content }
+    end
+
+  end
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    @product.products_storehouses.build if @product.products_storehouses.blank?
   end
 
   # POST /products
@@ -46,7 +57,7 @@ class Admin::ProductsController < Admin::BaseController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to [:admin, @product], notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
         format.html { render action: "new" }
@@ -62,7 +73,7 @@ class Admin::ProductsController < Admin::BaseController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to [:admin, @product], notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,7 +89,7 @@ class Admin::ProductsController < Admin::BaseController
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to admin_products_url }
       format.json { head :no_content }
     end
   end

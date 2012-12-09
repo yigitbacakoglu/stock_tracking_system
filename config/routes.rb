@@ -1,8 +1,14 @@
 StockTrackingSystem::Application.routes.draw do
 
   namespace :admin do
-    resources :products
+    resources :products  do
+      member do
+        delete 'delete_store_house'
+      end
+    end
     resources :stores
+    resources :storehouses
+
 
 
   end

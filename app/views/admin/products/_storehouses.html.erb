@@ -1,0 +1,71 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Store House</th>
+    <th>Count on hand</th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= f.fields_for :products_storehouses do |st| %>
+      <tr class='<%= st.object.id %>' >
+        <td><%= st.select :storehouse_id, Storehouse.all.collect { |i| [i.name, i.id] }, { :include_blank => true } %> </td>
+        <td><%= st.number_field :count_on_hand, :class => 'text_field' %>
+        <td><%= st.hidden_field :id %>
+          <%= link_to 'X', '#', :class => 'remove-tr', :style => "color:red;" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to 'Connect new ware house', '', :class => 'add_new' %>
+
+<script>
+    window.onload = function () {
+        tr = $('.table').find('tbody').find('tr').first().clone();
+        $('.add_new').click(function (e) {
+            td = tr.clone();
+            e.preventDefault();
+            $(this).parent().find('table').find('tbody').append(change_ids(td))
+        })
+
+        $('.remove-tr').live('click', function (e) {
+            e.preventDefault();
+            var id = $(this).closest('tr').attr('class');
+            $(this).closest('tr').remove();
+
+            if (id.length > 0) {
+                $.ajax({
+                    type:"POST",
+                    data:{
+                        _method:'delete'
+                    },
+                    beforeSend:function (xhr) {
+                        xhr.setRequestHeader('X-CSRF-Token',
+                                $('meta[name="csrf-token"]').attr('content'));
+                    },
+                    url:'/admin/products/'+ id +'/delete_store_house',
+                    success:function (response) {
+                        if (response.length == 0) {
+                            $(this).closest('tr').remove();
+                        }
+                    }
+                })
+            }
+
+        })
+
+        change_ids = function (element) {
+            var new_id = Math.floor(Math.random()* 9999999999999);
+            element.find("input, select").each(function () {
+                var el = $(this);
+                el.val("");
+                el.attr("id", el.attr("id").replace(/\d+/, new_id))
+                el.attr("name", el.attr("name").replace(/\d+/, new_id))
+            })
+            return element;
+        }
+
+    }
+
+
+</script>
+

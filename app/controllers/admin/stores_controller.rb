@@ -45,8 +45,8 @@ class Admin::StoresController < ApplicationController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: 'Store was successfully created.' }
-        format.json { render json: @store, status: :created, location: @store }
+        format.html { redirect_to [:admin, @store] , notice: 'Store was successfully created.' }
+        format.json { render json: @store, status: :created, location: [:admin, @store] }
       else
         format.html { render action: "new" }
         format.json { render json: @store.errors, status: :unprocessable_entity }
@@ -77,7 +77,7 @@ class Admin::StoresController < ApplicationController
     @store.destroy
 
     respond_to do |format|
-      format.html { redirect_to stores_url }
+      format.html { redirect_to admin_stores_url }
       format.json { head :no_content }
     end
   end
